@@ -1,11 +1,15 @@
 ---
+import "@fontsource-variable/montserrat";
+import "@fontsource/nixie-one";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
 import Header from "../components/Header.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
+  <Hero />
   <main>
     <svg
       class="astro-a"
@@ -39,7 +43,8 @@ import Header from "../components/Header.astro";
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
       />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
+      above.
     </p>
     <ul role="list" class="link-card-grid">
       <Card
