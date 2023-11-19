@@ -1,0 +1,23 @@
+---
+interface Props {
+    type?: "white" | "light" | "dark" | "black";
+    wide?: boolean;
+}
+
+const { type = "white", wide = false } = Astro.props;
+const styles = {
+    white: "bg-white text-black",
+    light: "bg-secondary text-black",
+    dark: "bg-primary text-white",
+    black: "bg-black text-white",
+};
+
+const outerStyle = styles[type] || styles.white;
+const innerStyle = wide ? '' : 'max-w-5xl m-auto';
+---
+
+<section class={`${outerStyle} px-8 py-10 md:py-14`}>
+    <div class={innerStyle}>
+        <slot />
+    </div>
+</section>
