@@ -1,0 +1,16 @@
+---
+import LogoSmall from "./LogoSmall.astro";
+import Name from "./Name.astro";
+
+interface Props {
+    height?: number;
+    width?: number;
+}
+
+const { height, width } = Astro.props;
+---
+
+<div class="flex flex-row gap-1">
+    <LogoSmall height={height} width={width} />
+    <Name height={height} width={width} />
+</div>

@@ -1,16 +1,49 @@
 ---
+import { Icon } from "astro-icon";
 import Section from "../layouts/Section.astro";
+import SectionHeader from "../elements/SectionHeader.astro";
+import Span from "../elements/Span.astro";
 ---
 
-<Section>
-    <h2>Afecțiuni întâlnite și învinse cu succes</h2>
-    <ul>
-        <li>Ruptură de ligamente încrucișate</li>
-        <li>Hernie de disc lombară</li>
-        <li>Durere de spate</li>
-        <li>Afecțiuni posturale</li>
-        <li>Probleme cu greutatea</li>
-        <li>Calitatea scăzută a vieții cauzată de sedentarism</li>
-        <li>Necesitatea de dezvoltare a musculaturii</li>
-    </ul>
+<Section type="light">
+    <SectionHeader title="Afecțiuni întâlnite și învinse cu succes" />
+    <div class="flex flex-col lg:flex-row lg:justify-between leading-8">
+        <ul>
+            <li class="flex flex-row items-center">
+                <Icon height="24" name="healthicons:leg" />
+                <Span style="pl-0.5">Ruptură de ligamente încrucișate</Span>
+            </li>
+            <li class="flex flex-row items-center">
+                <Icon height="24" name="healthicons:bandage-adhesive" />
+                <Span style="pl-0.5">Hernie de disc lombară</Span>
+            </li>
+            <li class="flex flex-row items-center">
+                <Icon height="24" name="healthicons:back-pain" />
+                <Span style="pl-0.5">Durere de spate</Span>
+            </li>
+            <li class="flex flex-row items-center">
+                <Icon height="24" name="healthicons:exercise" />
+                <Span style="pl-0.5">Dezvoltare musculară - Hipertrofie</Span>
+            </li>
+        </ul>
+        <ul>
+            <li class="flex flex-row items-center">
+                <Icon height="24" name="healthicons:headache" />
+                <Span style="pl-0.5">Afecțiuni posturale</Span>
+            </li>
+            <li class="flex flex-row items-center">
+                <Icon height="24" name="healthicons:overweight" />
+                <Span style="pl-0.5">Probleme cu greutatea</Span>
+            </li>
+            <li class="flex flex-row items-center">
+                <Icon
+                    height="24"
+                    name="healthicons:chart-death-rate-increasing"
+                />
+                <Span style="pl-0.5">
+                    Calitatea scăzută a vieții, cauzată de sedentarism
+                </Span>
+            </li>
+        </ul>
+    </div>
 </Section>

@@ -1,43 +1,52 @@
 ---
 import Section from "../layouts/Section.astro";
+import SectionHeader from "../elements/SectionHeader.astro";
+import H3 from "../elements/H3.astro";
+import Small from "../elements/Small.astro";
 ---
 
 <Section type="dark" wide>
+    <SectionHeader title="Beneficiile tale" />
     <div class="flex flex-col md:flex-row md:justify-around gap-5">
-        <div class="flex flex-col gap-3">
-            <h3 class="text-lg font-semibold leading-5">
-                Antrenamente personalizate
-            </h3>
-            <p class="text-sm">
+        <div class="flex flex-1 flex-col gap-3">
+            <H3>Protocol de recuperare si antrenament personalizat</H3>
+            <Small>
+                Antrenamentul ideal nu există, dar putem identifica împreună
+                antrenamentul ideal pentru tine.
+            </Small>
+        </div>
+        <!-- Disabled -->
+        <!-- <div class="border-b md:border-b-0 md:border-r text-white"></div>
+        <div class="flex flex-1 flex-col gap-3">
+            <H3>Recuperare eficientă</H3>
+            <Small>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            </Small>
+        </div> -->
+        <div class="border-b md:border-b-0 md:border-r text-white"></div>
+        <div class="flex flex-1 flex-col gap-3">
+            <H3>Rezultate de lungă durată</H3>
+            <Small>
+                Te ajut nu doar să te recuperezi, ci și să previi recidivele și
+                să îți îmbunătățești calitatea vieții.
+            </Small>
         </div>
         <div class="border-b md:border-b-0 md:border-r text-white"></div>
-        <div class="flex flex-col gap-3">
-            <h3 class="text-lg font-semibold leading-5">
-                Recuperare eficientă
-            </h3>
-            <p class="text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+        <div class="flex flex-1 flex-col gap-3">
+            <H3>Risc scăzut de accidentare</H3>
+            <Small>
+                Te învăț cum să execuți CORECT exercițiile și să eliminăm
+                riscurile.
+            </Small>
         </div>
-        <div class="border-b md:border-b-0 md:border-r text-white"></div>
-        <div class="flex flex-col gap-3">
-            <h3 class="text-lg font-semibold leading-5">
-                Risc scăzut de accidentare
-            </h3>
-            <p class="text-sm">
+        <!-- Disabled -->
+        <!-- <div class="border-b md:border-b-0 md:border-r text-white"></div>
+        <div class="flex flex-1 flex-col gap-3">
+            <H3>Identificarea și remedierea afecțiunilor fizice</H3>
+            <Small>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            </Small>
         </div>
-        <div class="border-b md:border-b-0 md:border-r text-white"></div>
-        <div class="flex flex-col gap-3">
-            <h3 class="text-lg font-semibold leading-5">
-                Identificarea și remedierea afecțiunilor fizice
-            </h3>
-            <p class="text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-        </div>
+        -->
     </div>
 </Section>

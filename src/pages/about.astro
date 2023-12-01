@@ -3,14 +3,12 @@ import { Image } from "astro:assets";
 import AboutMeImage from "../assets/about-me.jpg";
 import Section from "../layouts/Section.astro";
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/footer/Footer.astro";
+import PreviousExperiences from "../components/PreviousExperiences.astro";
 ---
 
 <Layout title="Ștefan Rusu - Kinetoterapeut și antrenor de fitness">
-    <Header />
     <Section>
-        <div class="flex flex-col md:flex-row gap-5">
+        <div class="flex flex-col mt-28 md:flex-row gap-5">
             <div class="md:flex-[2]">
                 <Image
                     class="m-auto rounded max-w-[300px]"
@@ -43,5 +41,5 @@ import Footer from "../components/footer/Footer.astro";
             </div>
         </div>
     </Section>
-    <Footer />
+    <PreviousExperiences />
 </Layout>

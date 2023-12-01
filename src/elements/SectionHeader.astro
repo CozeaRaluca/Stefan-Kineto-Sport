@@ -1,0 +1,31 @@
+---
+import { joinClasses } from "../utils";
+
+interface Props {
+  title: string;
+  titleStyle?: string;
+  subtitle?: string;
+  subtitleStyle?: string;
+}
+
+const { title, titleStyle, subtitle, subtitleStyle } = Astro.props;
+let titleClasses = "text-2xl font-semibold";
+let subtitleClasses = "mb-3 lg:mb-5";
+
+if (titleStyle) {
+  titleClasses = joinClasses(titleClasses, titleStyle);
+}
+
+if (!subtitle) {
+  titleClasses = joinClasses(titleClasses, "mb-5 lg:mb-8");
+}
+
+if (subtitleStyle) {
+  subtitleClasses = joinClasses(subtitleClasses, subtitleStyle);
+}
+---
+
+<header class="text-center">
+  <h2 class={titleClasses}>{title}</h2>
+  {subtitle && <h4 class={subtitleClasses}>{subtitle}</h4>}
+</header>

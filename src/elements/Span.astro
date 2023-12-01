@@ -1,0 +1,29 @@
+---
+import { joinClasses } from "../utils";
+
+interface Props {
+  size?: "sm" | "md" | "lg";
+  style?: string;
+  strong?: boolean;
+}
+
+const { size = "md", style, strong } = Astro.props;
+const sizeStyle = {
+  sm: "text-sm lg:text-md",
+  md: "lg:text-lg",
+  lg: "text-lg lg:text-xl",
+};
+let classes = sizeStyle[size] || "";
+
+if (style) {
+  classes = joinClasses(classes, style);
+}
+
+if (strong) {
+  classes = joinClasses(classes, "font-semibold");
+}
+---
+
+<span class={classes}>
+  <slot />
+</span>

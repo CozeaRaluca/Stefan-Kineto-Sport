@@ -1,0 +1,16 @@
+---
+interface Props {
+  style?: string;
+}
+
+const { style } = Astro.props;
+let classes = "text-sm lg:text-md mb-2";
+
+if (style) {
+  classes += " " + style;
+}
+---
+
+<p class={classes}>
+  <slot />
+</p>

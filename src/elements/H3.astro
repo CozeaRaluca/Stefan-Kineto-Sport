@@ -1,0 +1,18 @@
+---
+import { joinClasses } from "../utils";
+
+interface Props {
+  style?: string;
+}
+
+const { style } = Astro.props;
+let classes = "text-lg font-semibold leading-5";
+
+if (style) {
+  classes = joinClasses(classes, style);
+}
+---
+
+<h2 class={classes}>
+  <slot />
+</h2>

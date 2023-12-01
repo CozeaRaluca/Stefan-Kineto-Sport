@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import AboutMeImage from "../assets/about-me.jpg";
+import Section from "../layouts/Section.astro";
+import Layout from "../layouts/Layout.astro";
+import SectionHeader from "../elements/SectionHeader.astro";
+import P from "../elements/P.astro";
+import H1 from "../elements/H1.astro";
+import H2 from "../elements/H2.astro";
+import H3 from "../elements/H3.astro";
+import Span from "../elements/Span.astro";
+---
+
+<Layout title="Ștefan Rusu - Kinetoterapeut și antrenor de fitness">
+    <Section>
+        <H1 style="mt-20 text-center">Scapă de durerea de spate!</H1>
+        <div class="mt-5">
+            <div class="flex flex-col md:flex-row gap-5 items-center">
+                <P style="md:flex-[2] text-center">
+                    Salut! Sunt <strong>Ștefan Rusu</strong>, kinetoterapeut și
+                    antrenor personal. Pe baza experienței din sala de fitness
+                    și a nevoilor întâlnite, am lansat un program prin care ofer
+                    protocoale de recuperare personalizate sub forma de <b
+                        ><i>online coaching</i></b
+                    >, ajutându-te să depășești afecțiunile spatelui și să îți
+                    recâștigi calitatea vieții.
+                </P>
+                <div class="md:flex-[3]">
+                    <Image
+                        class="m-auto rounded max-w-[300px]"
+                        src={AboutMeImage}
+                        alt="Stefan Rusu"
+                    />
+                </div>
+            </div>
+        </div>
+    </Section>
+    <Section type="dark" wide>
+        <H2 style="text-center mb-0 pb-0">
+            Program online personalizat, ce include protocoale de recuperare de
+            kinetoterapie și antrenamente cu greutăți, care se practică pe o
+            perioadă de <b><i>90 de zile</i></b>.
+        </H2>
+    </Section>
+    <Section>
+        <SectionHeader title="Ce include programul?" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">Plan de Kinetoterapie Personalizat</H3>
+                <Span>
+                    Fie că ești acasă sau în sală de fitness, vei primi un plan
+                    de kinetoterapie adaptat nevoilor tale. Exerciții și
+                    antrenamente eficiente, ghidate pas cu pas, pentru a stimula
+                    recuperarea și a preveni recidivele.
+                </Span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">
+                    Sesiuni Săptămânale de Consultanță Online (Call 1:1)
+                </H3>
+                <Span>
+                    Beneficiază de întâlniri individuale săptămânale cu mine.
+                    Obține răspunsuri la întrebări, ajustează exercițiile și
+                    primește îndrumări personalizate pentru progres continuu.
+                </Span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">Suport 24/7 prin Mesaje</H3>
+                <Span>
+                    Sunt mereu aici pentru tine! Iți ofer sprijin și îndrumare
+                    prin mesaje, de cel putin 2 ori pe zi. Fie că ai nevoie de
+                    motivație sau clarificări, sunt la un mesaj distanță.
+                </Span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">Verificare Zilnică a Activității</H3>
+                <Span>
+                    Monitorizăm activitatea ta zilnică, de la numărul de pași la
+                    executarea exercițiilor și obiceiurile sănătoase. Astfel,
+                    îți vei oferi o privire detaliată asupra progresului și
+                    adaptăm planul tău în funcție de nevoile tale.
+                </Span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">Plan de Alimentație Personalizat</H3>
+                <Span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </Span>
+            </div>
+        </div>
+    </Section>
+</Layout>

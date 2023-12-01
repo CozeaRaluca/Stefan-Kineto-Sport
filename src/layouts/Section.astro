@@ -7,13 +7,13 @@ interface Props {
 const { type = "white", wide = false } = Astro.props;
 const styles = {
     white: "bg-white text-black",
-    light: "bg-secondary text-black",
-    dark: "bg-primary text-white",
-    black: "bg-black text-white",
+    light: "bg-slate-300 text-black",
+    dark: "bg-primary text-slate-50",
+    black: "bg-black text-slate-100",
 };
 
 const outerStyle = styles[type] || styles.white;
-const innerStyle = wide ? '' : 'max-w-5xl m-auto';
+const innerStyle = wide ? "" : "max-w-5xl m-auto";
 ---
 
 <section class={`${outerStyle} px-8 py-10 md:py-14`}>

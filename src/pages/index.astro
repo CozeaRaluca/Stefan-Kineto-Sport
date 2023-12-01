@@ -3,26 +3,27 @@ import "@fontsource-variable/montserrat";
 import "@fontsource/nixie-one";
 import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
+import P from "../elements/P.astro";
 import Hero from "../components/Hero.astro";
-import Header from "../components/Header.astro";
 import Features from "../components/Benefits.astro";
 import AboutMe from "../components/AboutMe.astro";
+import Services from "../components/Services.astro";
 import PreviousExperiences from "../components/PreviousExperiences.astro";
-import Footer from "../components/footer/Footer.astro";
+import YoutubeShorts from "../components/YoutubeShorts.astro";
 ---
 
 <Layout title="Ștefan Rusu - Kinetoterapeut și antrenor de fitness">
-  <Header />
   <Hero />
-  <Features />
-  <AboutMe />
   <Section type="dark" wide>
-    <h3 class="text-lg">
-      Recuperarea prin kinetoterapie este complementara cu condiționarea fizica
+    <P style="text-center">
+      Recuperarea prin kinetoterapie este complementară cu condiționarea fizică
       și dezvoltarea forței și a musculaturii, adică nu se poate realiza una
       fără celelalte două.
-    </h3>
+    </P>
   </Section>
+  <AboutMe />
+  <Features />
+  <Services />
   <PreviousExperiences />
-  <Footer />
+  <YoutubeShorts />
 </Layout>

@@ -1,6 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import HeroImage from "../assets/hero-img.png";
+import HeroImage from "../assets/hero.png";
+import H1 from "../elements/H1.astro";
+import P from "../elements/P.astro";
+
+const heroLayer =
+    '<div class="absolute bottom-0 h-2/5 w-full lg:right-0 lg:h-full lg:w-1/3 bg-secondary-500" />';
 ---
 
 <section class="relative h-screen bg-white overflow-hidden">
@@ -10,18 +15,14 @@ import HeroImage from "../assets/hero-img.png";
         <div
             class="flex flex-col flex-[3_1_0%] font-serif justify-center mt-28 lg:mt-0 lg:pl-20 z-20"
         >
-            <h1 class="mb-5 lg:mb-8 text-4xl font-semibold">
-                Recapătă controlul asupra corpului tău
-            </h1>
-            <p class="text-lg">
-                Te ajut să te bucuri de beneficiile <strong
-                    class="text-primary"
-                >
+            <H1>Recapătă controlul asupra corpului tău</H1>
+            <P>
+                Te ajut să te bucuri de beneficiile <strong>
                     kinetoterapiei și ale antrenamentelor personalizate de
                     fitness
                 </strong> pentru a prelua controlul asupra vieții și sănătății
                 tale!
-            </p>
+            </P>
         </div>
         <div
             class="flex flex-[2_1_0%] max-h-[50%] lg:max-h-none lg:h-full items-end justify-end"
@@ -33,8 +34,4 @@ import HeroImage from "../assets/hero-img.png";
             />
         </div>
     </main>
-    <div
-        class="absolute bottom-0 h-2/5 w-full lg:right-0 lg:h-full lg:w-1/3 bg-secondary-500"
-    >
-    </div>
 </section>
