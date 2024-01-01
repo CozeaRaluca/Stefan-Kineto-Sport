@@ -4,9 +4,13 @@ import AboutMeImage from "../assets/about-me.jpg";
 import Section from "../layouts/Section.astro";
 import Layout from "../layouts/Layout.astro";
 import PreviousExperiences from "../components/PreviousExperiences.astro";
+
+const title = "Ștefan Rusu - Kinetoterapeut și antrenor de fitness";
+const description =
+    "Bucura-te de avantajele kinetoterapiei prin antrenamente personalizate, bazate pe nevoile si stilul tau de viata";
 ---
 
-<Layout title="Ștefan Rusu - Kinetoterapeut și antrenor de fitness">
+<Layout title={title} description={description}>
     <Section>
         <div class="flex flex-col mt-28 md:flex-row gap-5">
             <div class="md:flex-[2]">

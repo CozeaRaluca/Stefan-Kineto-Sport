@@ -10,9 +10,12 @@ import AboutMe from "../components/AboutMe.astro";
 import Services from "../components/Services.astro";
 import PreviousExperiences from "../components/PreviousExperiences.astro";
 import YoutubeShorts from "../components/YoutubeShorts.astro";
+
+const title = "Ștefan Rusu - Kinetoterapeut și antrenor de fitness";
+const description = "Bucura-te de avantajele kinetoterapiei prin antrenamente personalizate, bazate pe nevoile si stilul tau de viata";
 ---
 
-<Layout title="Ștefan Rusu - Kinetoterapeut și antrenor de fitness">
+<Layout title={title} description={description}>
   <Hero />
   <Section type="dark" wide>
     <P style="text-center">
