@@ -1,0 +1,33 @@
+---
+import Section from "../layouts/Section.astro";
+import SectionHeader from "../elements/SectionHeader.astro";
+import H3 from "../elements/H3.astro";
+---
+
+<Section type="light">
+    <SectionHeader title="Kinetoterapie și personal training la sală" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div id="cluj-napoca" class="flex flex-col">
+            <H3 style="leading-7">Premium Fitness - Platinia, Cluj-Napoca</H3>
+            <p>Luni, Miercuri și Joi</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5466.1745652704385!2d23.572079!3d46.763176!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1704628764774!5m2!1sen!2sro"
+                height="300"
+                style="border:0; margin-top:5px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="huedin" class="flex flex-col">
+            <H3 style="leading-7">Evo Gym - Huedin (Cluj)</H3>
+            <p>Marți, Vineri și Sâmbătă</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5455.969058362374!2d23.021578471439902!3d46.86367685783948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4748f1fd3996d419%3A0x9578dc56f931d644!2sEvo%20Gym!5e0!3m2!1sen!2sro!4v1704628987896!5m2!1sen!2sro"
+                height="300"
+                style="border:0; margin-top:5px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</Section>

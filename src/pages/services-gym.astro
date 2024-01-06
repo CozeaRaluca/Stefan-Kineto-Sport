@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import AboutMeImage from "../assets/about-me.jpg";
+import Locations from "../components/Locations.astro";
 import Section from "../layouts/Section.astro";
 import Layout from "../layouts/Layout.astro";
 import H1 from "../elements/H1.astro";
@@ -9,42 +10,99 @@ import H3 from "../elements/H3.astro";
 import P from "../elements/P.astro";
 import Span from "../elements/Span.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
+
+const title = "Kinetoterapie și Personal Training în sala de fitness";
+const description =
+    "Bucură-te de avantajele kinetoterapiei combinate cu antrenamente personalizate, in Cluj-Napoca sau Huedin (Cluj).";
 ---
 
-<Layout title="Ștefan Rusu - Kinetoterapeut și antrenor de fitness">
+<Layout title={title} description={description}>
     <Section>
-        <H1 style="mt-20 text-center">Sesiuni 1-la-1 în sala de fitness</H1>
+        <H1 style="mt-20 text-center">Sesiuni 1 la 1 în sala de fitness</H1>
         <div class="mt-5">
             <div class="flex flex-col md:flex-row gap-5 items-center">
                 <P style="md:flex-[2] text-center">
                     Salut! Sunt <strong>Ștefan Rusu</strong>, kinetoterapeut și
-                    antrenor personal.
+                    antrenor personal. Te pot ajuta să îți îmbunătățești
+                    sănătătea și forma fizică atât în <a href="#cluj-napoca"
+                        ><strong>Cluj-Napoca</strong></a
+                    >, cât și în <a href="#huedin"
+                        ><strong>Huedin (Cluj)</strong></a
+                    >
+                    <div class="md:flex-[3]">
+                        <Image
+                            class="m-auto rounded max-w-[300px]"
+                            src={AboutMeImage}
+                            alt="Stefan Rusu"
+                        />
+                    </div>
                 </P>
-                <div class="md:flex-[3]">
-                    <Image
-                        class="m-auto rounded max-w-[300px]"
-                        src={AboutMeImage}
-                        alt="Stefan Rusu"
-                    />
-                </div>
             </div>
         </div>
+    </Section>
+    <Section type="dark" wide>
+        <H2 style="text-center mb-0 pb-0">
+            Sesiunile de 1 la 1 oferă mai multă calitate. Colaborarea este mai
+            eficientă datorită atenției dedicate unei singure persoane.
+        </H2>
     </Section>
     <Section>
         <SectionHeader title="Ce presupune colaborarea?" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <!-- Planuri -->
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Plan de Antrenament Personalizat</H3>
+                <H3 style="mb-2">
+                    Plan Personalizat de Kinetoterapie și Exerciții Specifice
+                </H3>
                 <Span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    În funcție de scopul pe care vrei să îl atingi la sală, vei
+                    primi un plan de kinetoterapie adaptat nevoilor tale, care
+                    include exerciții și antrenamente eficiente, ghidate pas cu
+                    pas, pentru a stimula recuperarea și a preveni recidivele.
                 </Span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Plan de Alimentație Personalizat</H3>
+                <H3 style="mb-2">
+                    Plan de dezvoltare a obiceiurilor sănătoase
+                </H3>
                 <Span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Te ajut să devii mai disciplinat în activitățile zilnice,
+                    pentru a accelera procesul de recuperare și pentru a
+                    beneficia la maxim, pe termen lung, de corpul tău și de
+                    capacitatea acestuia.
+                </Span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">Plan Personalizat de Alimentație</H3>
+                <Span>
+                    Dieta perfectă nu există. Iar dacă ar exista, probabil ți-ar
+                    fi greu să o urmezi pe termen lung. În schimb, există
+                    echilibru. Te ajut să îți descoperi propriul stil alimentar,
+                    în funcție de produsele și felurile tale preferate de
+                    mâncare, care nu te ajută doar să-ți atingi scopul cât mai
+                    repede, ci și îți menține organismul sănătos.
+                </Span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">Suport 24/7 prin Mesaje</H3>
+                <Span>
+                    Sunt mereu aici pentru tine! Îți ofer sprijin și îndrumare
+                    prin mesaje sau telefonic. Fie că ai nevoie de motivație sau
+                    clarificări, sunt la un mesaj distanță.
+                </Span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <H3 style="mb-2">Verificare Zilnică a Activității</H3>
+                <Span>
+                    Monitorizăm activitatea ta zilnică, de la numărul de pași
+                    sau timpul petrecut plimbându-te, la executarea exercițiilor
+                    și dezvoltarea obiceiurilor sănătoase. Astfel, vei avea o
+                    perspectivă detaliată asupra protocolului și progresului.
+                    Adaptăm planul tău în funcție de nevoile tale, pentru ca tu
+                    să te simți cât mai bine.
                 </Span>
             </div>
         </div>
     </Section>
+    <Locations />
 </Layout>
