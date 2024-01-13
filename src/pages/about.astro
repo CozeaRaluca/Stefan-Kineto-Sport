@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import AboutMeImage from "../assets/about-me.jpg";
 import Section from "../layouts/Section.astro";
 import Layout from "../layouts/Layout.astro";
-import P from "../elements/P.astro";
+import H2 from "../elements/H2.astro";
 import PreviousExperiences from "../components/PreviousExperiences.astro";
 import Locations from "../components/Locations.astro";
 
@@ -48,9 +48,9 @@ const description =
         </div>
     </Section>
     <Section type="dark" wide>
-        <P style="text-center">
-            Alege <strong>prevenția</strong>! Nu aștepta până la tratament.
-        </P>
+        <H2 style="text-center mb-0 pb-0">
+            Alege <i><strong>prevenția</strong></i>! Nu aștepta până la tratament.
+        </H2>
     </Section>
     <PreviousExperiences sectionType="white" />
     <Locations title="Mă găsești în Cluj-Napoca și Huedin" />
