@@ -4,6 +4,7 @@ import AboutMeImage from "../assets/about-me.jpg";
 import Section from "../layouts/Section.astro";
 import P from "../elements/P.astro";
 import Span from "../elements/Span.astro";
+import Icon from "astro-icon";
 ---
 
 <Section>
@@ -23,8 +24,11 @@ import Span from "../elements/Span.astro";
                 putea preveni viitoare accidentări, afecțiuni și intervenții
                 chirurgicale.
             </P>
-            <a href="/about">
-                <Span>Mai multe despre activitatea mea</Span>
+            <a href="/about" class="flex flex-row items-center">
+                <Span style="mr-1 hover:mr-2 text-gray-700 hover:text-gray-900">
+                    Mai multe despre activitatea mea
+                </Span>
+                <Icon height="24" name="mdi:arrow-right" />
             </a>
         </div>
     </div>

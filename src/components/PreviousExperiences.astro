@@ -3,15 +3,17 @@ import { Icon } from "astro-icon";
 import Section from "../layouts/Section.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
 import Span from "../elements/Span.astro";
+
+const { sectionType = "light" } = Astro.props;
 ---
 
-<Section type="light">
+<Section type={sectionType}>
     <SectionHeader title="Afecțiuni întâlnite și învinse cu succes" />
     <div class="flex flex-col lg:flex-row lg:justify-between leading-8">
         <ul>
             <li class="flex flex-row items-center">
                 <Icon height="24" name="healthicons:leg" />
-                <Span style="pl-0.5">Ruptură de ligamente încrucișate</Span>
+                <Span style="pl-0.5">Ruptură de ligament încrucișat</Span>
             </li>
             <li class="flex flex-row items-center">
                 <Icon height="24" name="healthicons:bandage-adhesive" />

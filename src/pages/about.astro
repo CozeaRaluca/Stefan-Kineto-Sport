@@ -3,11 +3,13 @@ import { Image } from "astro:assets";
 import AboutMeImage from "../assets/about-me.jpg";
 import Section from "../layouts/Section.astro";
 import Layout from "../layouts/Layout.astro";
+import P from "../elements/P.astro";
 import PreviousExperiences from "../components/PreviousExperiences.astro";
+import Locations from "../components/Locations.astro";
 
 const title = "Despre Ștefan Rusu, Kinetoterapeut și antrenor de fitness";
 const description =
-    "Bucura-te de avantajele kinetoterapiei prin antrenamente personalizate, bazate pe nevoile si stilul tau de viata";
+    "Bucură-te de avantajele kinetoterapiei prin antrenamente personalizate, bazate pe nevoile și stilul tău de viață";
 ---
 
 <Layout title={title} description={description}>
@@ -45,5 +47,11 @@ const description =
             </div>
         </div>
     </Section>
-    <PreviousExperiences />
+    <Section type="dark" wide>
+        <P style="text-center">
+            Alege <strong>prevenția</strong>! Nu aștepta până la tratament.
+        </P>
+    </Section>
+    <PreviousExperiences sectionType="white" />
+    <Locations title="Mă găsești în Cluj-Napoca și Huedin" />
 </Layout>

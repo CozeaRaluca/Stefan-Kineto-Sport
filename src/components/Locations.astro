@@ -2,10 +2,16 @@
 import Section from "../layouts/Section.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
 import H3 from "../elements/H3.astro";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<Section type="light">
-    <SectionHeader title="Kinetoterapie și personal training la sală" />
+<Section id="locations" type="light">
+    <SectionHeader title={title} />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div id="cluj-napoca" class="flex flex-col">
             <H3 style="leading-7">Premium Fitness - Platinia, Cluj-Napoca</H3>
