@@ -1,4 +1,5 @@
 ---
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/footer/Footer.astro";
 
@@ -13,6 +14,8 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Analytics Code -->
+    <GoogleAnalytics />
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
@@ -20,20 +23,6 @@ const { title, description } = Astro.props;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <!-- Google tag (gtag.js) -->
-    <script
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-QFFCGM8XXR"></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-QFFCGM8XXR");
-    </script>
   </head>
   <body>
     <Header />
