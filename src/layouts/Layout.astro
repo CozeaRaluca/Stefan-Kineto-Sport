@@ -21,9 +21,11 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFFCGM8XXR"
-    ></script>
-    <script is:inline>
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QFFCGM8XXR"></script>
+    <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
