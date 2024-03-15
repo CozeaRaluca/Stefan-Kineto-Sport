@@ -10,6 +10,7 @@ import H3 from "../elements/H3.astro";
 import P from "../elements/P.astro";
 import Span from "../elements/Span.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
+import CollabGymCTA from "../components/CollabGymCTA.astro";
 
 const title = "Kinetoterapie și Personal Training în sala de fitness";
 const description =
@@ -21,22 +22,25 @@ const description =
         <H1 style="mt-20 text-center">Sesiuni 1 la 1 în sala de fitness</H1>
         <div class="mt-5">
             <div class="flex flex-col md:flex-row gap-5 items-center">
-                <P style="md:flex-[2] text-center">
-                    Salut! Sunt <strong>Ștefan Rusu</strong>, kinetoterapeut și
-                    antrenor personal. Te pot ajuta să îți îmbunătățești
-                    sănătătea și forma fizică atât în <a href="#cluj-napoca"
-                        ><strong>Cluj-Napoca</strong></a
-                    >, cât și în <a href="#huedin"
-                        ><strong>Huedin (Cluj)</strong></a
-                    >
-                    <div class="md:flex-[3]">
-                        <Image
-                            class="m-auto rounded max-w-[300px]"
-                            src={AboutMeImage}
-                            alt="Stefan Rusu"
-                        />
-                    </div>
-                </P>
+                <div class="flex flex-col gap-2 items-center">
+                    <P style="md:flex-[2] text-center">
+                        Salut! Sunt <strong>Ștefan Rusu</strong>, kinetoterapeut
+                        și antrenor personal. Te pot ajuta să îți îmbunătățești
+                        sănătătea și forma fizică atât în <a href="#cluj-napoca"
+                            ><strong>Cluj-Napoca</strong></a
+                        >, cât și în <a href="#huedin"
+                            ><strong>Huedin (Cluj)</strong></a
+                        >
+                    </P>
+                    <CollabGymCTA />
+                </div>
+                <div class="md:flex-[3]">
+                    <Image
+                        class="m-auto rounded max-w-[300px]"
+                        src={AboutMeImage}
+                        alt="Stefan Rusu"
+                    />
+                </div>
             </div>
         </div>
     </Section>

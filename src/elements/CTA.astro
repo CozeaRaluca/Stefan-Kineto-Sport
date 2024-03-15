@@ -1,0 +1,20 @@
+---
+import { joinClasses } from "../utils";
+
+interface Props {
+    href: string;
+    style?: string;
+}
+
+const { style, href } = Astro.props;
+let classes =
+    "bg-secondary hover:bg-secondary-light rounded-lg px-4 py-2 m-1 w-auto font-bold text-center";
+
+if (style) {
+    classes = joinClasses(classes, style);
+}
+---
+
+<a class={classes} href={href} target="_blank">
+    <slot />
+</a>
