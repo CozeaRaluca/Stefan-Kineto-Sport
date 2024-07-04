@@ -1,0 +1,36 @@
+---
+import Icon from "astro-icon";
+import CollabStep from "./CollabStep.astro";
+
+const STEPS = [
+    {
+        title: "Completează formularul de colaborare online",
+        description: "Pentru a facilita procesul de cunoaștere, îți recomand să completezi formularul cât mai în detaliu. Asta mă va ajuta să îți pot pregăti o experiență personalizată și cât mai potrivită pentru nevoile tale. Cu toate acestea, nu îți face griji dacă omiți anumite aspecte. Le vom putea clarifica și în discuția ulterioară.",
+        hasForm: true,
+    },
+    {
+        title: "Setează o discuție pentru a agrea programul potrivit pentru tine",
+        description: "Această discuție are rolul de a clarifica informațiile introduse în formular, de a stabili obiective clare și de a valida o potențială colaborare. Pentru a avea o discuție cât mai eficientă, îți recomand să acorzi cât mai multă atenție formularului de colaborare online din pasul anterior.",
+    },
+    {
+        title: "Efectuează plata la linkul primit prin email",
+        description: "Plata nu se efectuează decât după ce agreăm că potențiala colaborare este fezabilă. Costurile pot să difere în funcție de nevoile și disponibilitatea fiecăruia.",
+    },
+    {
+        title: "Primești acces în aplicație",
+        description: "După ce ai achiziționat programul, vei primi un email cu un link pentru a descărca aplicația de antrenament. Programul poate fi accesat atât de pe telefon, cât și de pe laptop.",
+    },
+    {
+        title: "Primești acces la programul personalizat",
+        description: "Cu toate că imediat după ce reușești să accesezi aplicația vei avea acces și la un program de antrenament mai general, generarea unui plan de antrenament personalizat poate dura până la 10 zile. Acest plan poate fi editat și ulterior, în funcție de cum decurge colaborarea.",
+    }
+];
+---
+<ol class="relative border-s border-gray-200">                 
+    {STEPS.map((step, index) => (
+        <CollabStep stepCount={index + 1} title={step.title} description={step.description}>
+            {step.hasForm ? <a class="flex flex-row items-center gap-1 hover:gap-2 text-primary font-semibold" href="https://forms.gle/pPPq2Qf8d1fbLbAT9" target="_blank">Formular online <Icon height="18" name="mdi:arrow-right" /></a> : undefined}
+        </CollabStep>
+    ))}
+</ol>
+
