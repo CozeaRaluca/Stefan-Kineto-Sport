@@ -4,11 +4,6 @@ import AboutMeImage from "../assets/about-me.jpg";
 import Locations from "../components/Locations.astro";
 import Section from "../layouts/Section.astro";
 import Layout from "../layouts/Layout.astro";
-import H1 from "../elements/H1.astro";
-import H2 from "../elements/H2.astro";
-import H3 from "../elements/H3.astro";
-import P from "../elements/P.astro";
-import Span from "../elements/Span.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
 import CollabGymCTA from "../components/CollabGymCTA.astro";
 
@@ -19,11 +14,11 @@ const description =
 
 <Layout title={title} description={description}>
     <Section>
-        <H1 style="mt-20 text-center">Sesiuni 1 la 1 în sala de fitness</H1>
+        <h1 class="page-title">Sesiuni 1 la 1 în sala de fitness</h1>
         <div class="mt-5">
             <div class="flex flex-col md:flex-row gap-5 items-center">
                 <div class="flex flex-col gap-2 items-center">
-                    <P style="md:flex-[2] text-center">
+                    <p class="md:flex-[2] text-center">
                         Salut! Sunt <strong class="text-primary">Ștefan Rusu</strong>, kinetoterapeut
                         și antrenor personal. Te pot ajuta să îți îmbunătățești
                         sănătătea, forma fizică, să învingi orice afecțiune
@@ -32,7 +27,7 @@ const description =
                         >, cât și în <a href="#huedin"
                             ><strong>Huedin (Cluj)</strong></a
                         >
-                    </P>
+                    </p>
                     <CollabGymCTA />
                 </div>
                 <div class="md:flex-[3]">
@@ -46,76 +41,76 @@ const description =
         </div>
     </Section>
     <Section type="dark" wide>
-        <H2 style="text-center mb-0 pb-0">
+        <h2 class="text-center mb-0 pb-0">
             Sesiunile de <strong>1 la 1</strong> oferă mai multă <strong class="text-secondary tracking-wide">calitate</strong>. <br>Colaborarea este mai
             eficientă datorită atenției dedicate unei singure persoane.
-        </H2>
+        </h2>
     </Section>
     <Section>
         <SectionHeader title="Ce presupune colaborarea?" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
             <!-- Planuri -->
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">
+                <h3 class="mb-2">
                     Plan Personalizat de Kinetoterapie și Exerciții Specifice
-                </H3>
-                <Span>
+                </h3>
+                <span>
                     În funcție de scopul pe care vrei să îl atingi la sală, vei
                     primi un plan de kinetoterapie adaptat nevoilor tale, care
                     include exerciții și antrenamente specifice, ghidate pas cu
                     pas, pentru a stimula recuperarea și dezvoltarea musculară
                     și pentru a preveni recidivele.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">
+                <h3 class="mb-2">
                     Plan de dezvoltare a obiceiurilor sănătoase
-                </H3>
-                <Span>
+                </h3>
+                <span>
                     Te ajut să devii mai disciplinat în activitățile zilnice și
                     să-ți formezi obiceiuri sustenabile. Fiecare pas pe care îl
                     faci este important pentru a accelera procesul de recuperare
                     și pentru a beneficia la maxim, pe termen lung, de corpul
                     tău și de capacitatea acestuia.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Plan Personalizat de Alimentație</H3>
-                <Span>
+                <h3 class="mb-2">Plan Personalizat de Alimentație</h3>
+                <span>
                     Dieta perfectă nu există. Iar dacă ar exista, probabil ți-ar
                     fi greu să o urmezi pe termen lung. În schimb, există
                     echilibru. Te ajut să îți descoperi propriul stil alimentar,
                     în funcție de produsele și felurile tale preferate de
                     mâncare, care nu te ajută doar să-ți atingi scopul cât mai
                     repede, ci și îți menține organismul sănătos.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Verificare Zilnică a Activității</H3>
-                <Span>
+                <h3 class="mb-2">Verificare Zilnică a Activității</h3>
+                <span>
                     Monitorizăm activitatea ta zilnică, de la numărul de pași
                     sau timpul petrecut plimbându-te, la executarea exercițiilor
                     și dezvoltarea obiceiurilor sănătoase. Astfel, vei avea o
                     perspectivă detaliată asupra protocolului și progresului.
                     Adaptăm planul tău în funcție de nevoile tale, pentru ca tu
                     să te simți cât mai bine.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Coaching 1 la 1</H3>
-                <Span>
+                <h3 class="mb-2">Coaching 1 la 1</h3>
+                <span>
                     Sesiunile de 1 la 1 oferă mai multă calitate. Colaborarea
                     este mai eficientă datorită atenției dedicate unei singure
                     persoane.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Suport 24/7 prin Mesaje</H3>
-                <Span>
+                <h3 class="mb-2">Suport 24/7 prin Mesaje</h3>
+                <span>
                     Sunt mereu aici pentru tine! Îți ofer sprijin și îndrumare
                     prin mesaje sau telefonic. Fie că ai nevoie de motivație sau
                     clarificări, sunt la un mesaj distanță.
-                </Span>
+                </span>
             </div>
         </div>
     </Section>

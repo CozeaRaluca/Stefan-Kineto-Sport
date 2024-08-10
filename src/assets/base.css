@@ -4,9 +4,7 @@
 
 @layer base {
   h1 {
-    font-size: theme("fontSize.4xl");
-    font-weight: theme("fontWeight.semibold");
-    @apply mb-5 lg:mb-8;
+    @apply text-3xl md:text-4xl font-semibold mb-5 lg:mb-8;
   }
   h2 {
     font-size: theme("fontSize.2xl");
@@ -19,7 +17,7 @@
     line-height: theme("lineHeight.5");
   }
   p {
-    @apply text-lg lg:text-xl mb-2;
+    @apply text-base md:text-lg lg:text-xl mb-2;
   }
   span {
     @apply text-lg lg:text-xl;
@@ -55,5 +53,8 @@
   .highlight-primary {
     letter-spacing: 0.025em;
     color: theme('colors.secondary');
+  }
+  .page-title {
+    @apply mt-10 md:mt-20 text-center;
   }
 }

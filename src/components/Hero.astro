@@ -1,8 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import HeroImage from "../assets/hero.png";
-import H1 from "../elements/H1.astro";
-import P from "../elements/P.astro";
 import CollabOnlineCTA from "./CollabOnlineCTA.astro";
 import CollabGymCTA from "./CollabGymCTA.astro";
 
@@ -15,16 +13,16 @@ const heroLayer =
         class="relative z-10 px-8 lg:ml-25 w-full h-full flex flex-col lg:flex-row"
     >
         <div
-            class="flex flex-col flex-[3_1_0%] font-serif justify-center mt-24 lg:mt-0 lg:pl-20 z-20"
+            class="flex flex-col flex-[3_1_0%] font-serif justify-center mt-20 lg:mt-0 lg:pl-20 z-20"
         >
-            <H1>Recapătă controlul asupra corpului tău</H1>
-            <P>
+            <h1>Recapătă controlul asupra corpului tău</h1>
+            <p>
                 Te ajut să te bucuri de beneficiile <strong>
                     kinetoterapiei și ale antrenamentelor personalizate de
                     fitness
                 </strong> pentru a prelua controlul asupra vieții și sănătății
                 tale!
-            </P>
+            </p>
             <div class="flex flex-col md:flex-row gap-3 py-3">
                 <CollabOnlineCTA />
                 <CollabGymCTA />
