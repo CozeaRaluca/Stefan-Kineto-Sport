@@ -1,7 +1,6 @@
 ---
 import Section from "../layouts/Section.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
-import H3 from "../elements/H3.astro";
 
 interface Props {
     title: string;
@@ -14,19 +13,20 @@ const { title } = Astro.props;
     <SectionHeader title={title} />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div id="cluj-napoca" class="flex flex-col">
-            <H3 style="leading-7">Revo Fitness Club - Mănăștur, Cluj-Napoca</H3>
+            <h3 style="leading-7">18GYM Mărăști, 21 Decembrie, Cluj-Napoca</h3>
             <p>Luni, Miercuri și Joi</p>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.047374717546!2d23.567547176878538!3d46.76396264578433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490f9f69c6661b%3A0x628f77bad55496b5!2sREVO%20FITNESS%20CLUB%20-%20MANASTUR!5e0!3m2!1sen!2sro!4v1710361018880!5m2!1sen!2sro"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1366.1842688838615!2d23.607518!3d46.777342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490d1c8893852f%3A0x3fb7308422709c3b!2s18GYM%20Marasti%2021%20Decembrie%20Cluj%20Napoca!5e0!3m2!1sen!2sro!4v1723231385606!5m2!1sen!2sro"
                 height="300"
                 style="border:0; margin-top:5px;"
                 allowfullscreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
         </div>
         <div id="huedin" class="flex flex-col">
-            <H3 style="leading-7">Evo Gym - Huedin (Cluj)</H3>
-            <p>Marți, Vineri și Sâmbătă</p>
+            <h3 style="leading-7">Evo Gym - Huedin (Cluj)</h3>
+            <p>Ocazional (la nevoie)</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5455.969058362374!2d23.021578471439902!3d46.86367685783948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4748f1fd3996d419%3A0x9578dc56f931d644!2sEvo%20Gym!5e0!3m2!1sen!2sro!4v1704628987896!5m2!1sen!2sro"
                 height="300"

@@ -1,14 +1,10 @@
 ---
 import { Image } from "astro:assets";
+import Icon from "astro-icon";
 import AboutMeImage from "../assets/about-me.jpg";
 import Section from "../layouts/Section.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
-import P from "../elements/P.astro";
-import H1 from "../elements/H1.astro";
-import H2 from "../elements/H2.astro";
-import H3 from "../elements/H3.astro";
-import Span from "../elements/Span.astro";
 import CollabOnlineCTA from "../components/CollabOnlineCTA.astro";
 import CollabSteps from "../components/CollabSteps/index.astro";
 
@@ -20,23 +16,36 @@ const description =
 
 <Layout title={title} description={description}>
     <Section>
-        <H1 style="mt-20 text-center">
-            Scapă de durerea de spate, din confortul casei tale!
-        </H1>
+        <h1 class="mt-20 text-center">
+            Te învăț cum să-ți dezvolți eficient musculatura
+        </h1>
         <div class="mt-5">
             <div class="flex flex-col md:flex-row gap-5 items-center">
                 <div class="flex flex-col gap-2 items-center">
-                    <P style="md:flex-[2] text-center">
-                        Salut! Sunt <strong>Ștefan Rusu</strong>, kinetoterapeut
+                    <p class="md:flex-[2] text-center">
+                        Salut! Sunt <strong class="highlight">Ștefan Rusu</strong>, kinetoterapeut
+                        și antrenor personal. Pe baza experienței din sala de
+                        fitness și a nevoilor întâlnite, am lansat<br><strong>programul
+                        de dezvoltare musculară, simplu și sustenabil</strong>,<br> care are ca scop <strong><i>minimizarea oboselii</i></strong> și <strong><i>maximizarea stimulului</i></strong>.<br> Asta înseamnă că te pot învăța ce exerciții sunt potrivite și benefice pentru tine, cum să le execuți corect, cum să gestionezi încărcătura (greutățile) și efortul, sau care este durata optimă de antrenament.
+                        <!-- Salut! Sunt <strong>Ștefan Rusu</strong>, kinetoterapeut
                         și antrenor personal. Pe baza experienței din sala de
                         fitness și a nevoilor întâlnite, am lansat un program
                         prin care ofer protocoale de recuperare personalizate
                         sub forma de <strong><i>online coaching</i></strong>,
                         prin care te ajut să depășești momentele dureroase, să
                         învingi afecțiunile coloanei vertebrale, să faci tot ce
-                        îți place și să-ți redobândești calitatea vieții.
-                    </P>
-                    <CollabOnlineCTA />
+                        îți place și să-ți redobândești calitatea vieții. -->
+                        </p>
+                    <a
+                        href="/about-online-program"
+                        class="flex flex-row items-center md:max-w-[370px] md:mx-auto text-secondary-dark hover:text-secondary gap-1 hover:gap-2"
+                    >
+                        <span class="font-bold">
+                            Detalii despre programul online
+                        </span>
+                        <Icon height="24" name="mdi:arrow-right" />
+                    </a>
+                <CollabOnlineCTA />
                 </div>
                 <div class="md:flex-[3]">
                     <Image
@@ -49,11 +58,10 @@ const description =
         </div>
     </Section>
     <Section type="dark" wide>
-        <H2 style="text-center mb-0 pb-0">
-            Program online personalizat care include protocoale de recuperare de
-            kinetoterapie și antrenamente cu greutăți, desfășurate pe o perioadă
-            de <b><i>90 de zile</i></b>.
-        </H2>
+        <h2 class="text-center mb-0 pb-0">
+            Program online de hipertrofie musculară care include<br>protocoale de recuperare de
+            <b class="highlight-primary">kinetoterapie</b> și <b class="highlight-primary">antrenamente cu greutăți</b>,<br> personalizat pe baza nevoilor tale.
+        </h2>
     </Section>
     <Section id="online-collaboration-steps">
         <SectionHeader title="Cum primesc acces la program?" />
@@ -64,90 +72,90 @@ const description =
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
             <!-- Planuri -->
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">
+                <h3 class="mb-2">
                     Plan Personalizat de Kinetoterapie și Exerciții Specifice
-                </H3>
-                <Span>
+                </h3>
+                <span>
                     Fie că ești acasă sau în sala de fitness, vei primi un plan
                     de kinetoterapie adaptat nevoilor tale, care include
                     exerciții și antrenamente specifice, ghidate pas cu pas,
                     pentru a stimula recuperarea și dezvoltarea musculară și
                     pentru a preveni recidivele.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">
+                <h3 class="mb-2">
                     Plan de dezvoltare a obiceiurilor sănătoase
-                </H3>
-                <Span>
+                </h3>
+                <span>
                     Te ajut să devii mai disciplinat în activitățile zilnice și
                     să-ți formezi obiceiuri sustenabile. Fiecare pas pe care îl
                     faci este important pentru a accelera procesul de recuperare
                     și pentru a beneficia la maxim, pe termen lung, de corpul
                     tău și de capacitatea acestuia.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Plan Personalizat de Alimentație</H3>
-                <Span>
+                <h3 class="mb-2">Plan Personalizat de Alimentație</h3>
+                <span>
                     Dieta perfectă nu există. Iar dacă ar exista, probabil ți-ar
                     fi greu să o urmezi pe termen lung. În schimb, există
                     echilibru. Te ajut să îți descoperi propriul stil alimentar,
                     în funcție de produsele și felurile tale preferate de
                     mâncare, care nu te ajută doar să-ți atingi scopul cât mai
                     repede, ci și îți menține organismul sănătos.
-                </Span>
+                </span>
             </div>
 
             <!-- Suport online -->
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">
-                    Sesiuni Săptămânale de Consultanță Online (Call 1:1)
-                </H3>
-                <Span>
-                    Beneficiază de întâlniri individuale săptămânale cu mine.
-                    Obține răspunsuri la întrebări, ajustează programul și
-                    primește îndrumări personalizate pentru ușurință în execuție
-                    și progres continuu.
-                </Span>
-            </div>
-            <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Suport 24/7 prin Mesaje</H3>
-                <Span>
-                    Sunt mereu aici pentru tine! Îți ofer sprijin și îndrumare
-                    prin mesaje, de cel puțin 2 ori pe zi. Fie că ai nevoie de
-                    motivație sau clarificări, sunt la un mesaj distanță.
-                </Span>
-            </div>
-            <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Verificare Zilnică a Activității</H3>
-                <Span>
+                <h3 class="mb-2">Verificare Zilnică a Activității</h3>
+                <span>
                     Monitorizăm activitatea ta zilnică, de la numărul de pași
                     sau timpul petrecut plimbându-te, la executarea exercițiilor
                     și dezvoltarea obiceiurilor sănătoase. Astfel, vei avea o
                     perspectivă detaliată asupra protocolului și progresului.
                     Adaptăm planul tău în funcție de nevoile tale, pentru ca tu
                     să te simți cât mai bine.
-                </Span>
+                </span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <h3 class="mb-2">
+                    Sesiuni Săptămânale de Consultanță Online (Call 1:1)
+                </h3>
+                <span>
+                    Beneficiază de întâlniri individuale săptămânale cu mine.
+                    Obține răspunsuri la întrebări, ajustează programul și
+                    primește îndrumări personalizate pentru ușurință în execuție
+                    și progres continuu.
+                </span>
+            </div>
+            <div class="pt-8 border-t-2">
+                <h3 class="mb-2">Suport 24/7 prin Mesaje</h3>
+                <span>
+                    Sunt mereu aici pentru tine! Îți ofer sprijin și îndrumare
+                    prin mesaje, de cel puțin 2 ori pe zi. Fie că ai nevoie de
+                    motivație sau clarificări, sunt la un mesaj distanță.
+                </span>
             </div>
 
             <!-- Materiale si resurse -->
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Aplicație mobilă</H3>
-                <Span>
+                <h3 class="mb-2">Aplicație mobilă</h3>
+                <span>
                     Pentru a avea acces rapid și ușor la protocol, toate
                     materialele aferente vor fi disponibile într-o aplicație, pe
                     telefonul tău. Exercițiile explicate, planul de alimentație,
                     poze și alte informații, toate vor fi într-un singur loc.
-                </Span>
+                </span>
             </div>
             <div class="pt-8 border-t-2">
-                <H3 style="mb-2">Clipuri video explicative</H3>
-                <Span>
+                <h3 class="mb-2">Clipuri video explicative</h3>
+                <span>
                     Am pregătit pentru tine o serie de clipuri video
                     explicative, a fiecărui exercițiu, pentru executarea corectă
                     a acestora și prevenirea unei accidentări.
-                </Span>
+                </span>
             </div>
         </div>
     </Section>

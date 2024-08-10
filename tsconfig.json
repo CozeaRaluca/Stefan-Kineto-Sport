@@ -1,4 +1,5 @@
 {
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
@@ -14,6 +15,11 @@
     // Enable strict type checking.
     "strict": true,
     // Error when a value import is only used as a type.
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "baseUrl": "./",
+    "paths": {
+      // Enable absolute imports from the root of your project.
+      "@/*": ["./src/*"]
+    }
   }
 }

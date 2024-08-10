@@ -3,9 +3,10 @@ interface Props {
     type?: "white" | "light" | "dark" | "black";
     wide?: boolean;
     id?: string;
+    class?: string;
 }
 
-const { type = "white", wide = false, id } = Astro.props;
+const { type = "white", wide = false, id, class: classProp } = Astro.props;
 const styles = {
     white: "bg-white text-black",
     light: "bg-slate-300 text-black",
@@ -17,7 +18,7 @@ const outerStyle = styles[type] || styles.white;
 const innerStyle = wide ? "" : "max-w-5xl m-auto";
 ---
 
-<section id={id} class={`${outerStyle} px-8 py-10 md:py-14`}>
+<section id={id} class:list={[classProp, outerStyle, 'px-8 py-10 md:py-14']}>
     <div class={innerStyle}>
         <slot />
     </div>

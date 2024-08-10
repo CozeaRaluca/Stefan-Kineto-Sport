@@ -18,3 +18,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Astro stores important metadata for content collections in an .astro
+# directory in your project. The .astro directory will be updated for you
+# automatically anytime you run the astro dev, astro build commands. You
+# can run astro sync at any time to update the .astro directory manually.
+.astro
