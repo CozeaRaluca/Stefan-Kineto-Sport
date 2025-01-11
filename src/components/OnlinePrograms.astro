@@ -1,0 +1,41 @@
+---
+import BackSquatsImage from "../assets/back-squats-online-program.jpeg";
+import FundDeZeitaImage from "../assets/fund-de-zeita-online-program.jpeg";
+import DeadliftImage from "../assets/deadlift-online-program.jpeg";
+import GladiatorImage from "../assets/gladiator-online-program.jpeg";
+import Section from "../layouts/Section.astro";
+import SectionHeader from "../elements/SectionHeader.astro";
+import OnlineProgramCard from "./OnlineProgramCard.astro";
+---
+
+<Section>
+  <SectionHeader title="Programe online disponibile" />
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-0 items-center justify-items-center"
+  >
+    <OnlineProgramCard
+      href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=de8f1e38c18d440aad62c412e13cae0c"
+      title="Back Squats fără să te doară spatele"
+      image={BackSquatsImage}
+      price="50.00 RON"
+    />
+    <OnlineProgramCard
+      href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=7af71d4523214f86a0e85c156b68ddc9"
+      title="Fund de Zeiță"
+      image={FundDeZeitaImage}
+      price="250.00 RON"
+    />
+    <OnlineProgramCard
+      href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=9ab966886d9441069a3a470af9ec0f5c"
+      title="Îndreptări Convenționale fără să te doară spatele"
+      image={DeadliftImage}
+      price="50.00 RON"
+    />
+    <OnlineProgramCard
+      href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=20d697e5ce0d461eb8d1fd02cedcdbf6"
+      title="Trup de Gladiator"
+      image={GladiatorImage}
+      price="250.00 RON"
+    />
+  </div>
+</Section>

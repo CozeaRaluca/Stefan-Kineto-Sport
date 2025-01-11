@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  href: string;
+  title: string;
+  image: ImageMetadata;
+  price: string;
+}
+
+const { href, title, image, price } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class="relative hover:bg-slate-50 p-4 rounded-md w-full max-w-[300px]"
+>
+  <h2 class="text-lg mb-2 leading-5">
+    {title}
+  </h2>
+  <Image src={image} alt={title} class="rounded-md" />
+  <div
+    class="absolute bottom-6 right-6 p-2 rounded-md w-fit bg-gray-300 text-xs bg-opacity-80"
+  >
+    <span class="text-xs font-bold">{price}</span>
+  </div>
+</a>
