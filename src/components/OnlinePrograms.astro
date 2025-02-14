@@ -1,17 +1,17 @@
 ---
 import BackSquatsImage from "../assets/back-squats-online-program.jpeg";
 import FundDeZeitaImage from "../assets/fund-de-zeita-online-program.jpeg";
-import DeadliftImage from "../assets/deadlift-online-program.jpeg";
 import GladiatorImage from "../assets/gladiator-online-program.jpeg";
 import Section from "../layouts/Section.astro";
 import SectionHeader from "../elements/SectionHeader.astro";
 import OnlineProgramCard from "./OnlineProgramCard.astro";
+import P from "@/elements/P.astro";
 ---
 
 <Section>
-  <SectionHeader title="Programe online disponibile" />
+  <SectionHeader title="Programe online (predefinite) disponibile" />
   <div
-    class="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-0 items-center justify-items-center"
+    class="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-0 items-center justify-items-center"
   >
     <OnlineProgramCard
       href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=de8f1e38c18d440aad62c412e13cae0c"
@@ -21,21 +21,21 @@ import OnlineProgramCard from "./OnlineProgramCard.astro";
     />
     <OnlineProgramCard
       href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=7af71d4523214f86a0e85c156b68ddc9"
-      title="Fund de Zeiță"
+      title="Trup de Zeiță"
       image={FundDeZeitaImage}
       price="250.00 RON"
     />
     <OnlineProgramCard
-      href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=9ab966886d9441069a3a470af9ec0f5c"
-      title="Îndreptări Convenționale fără să te doară spatele"
-      image={DeadliftImage}
-      price="50.00 RON"
-    />
-    <OnlineProgramCard
       href="https://www.trainerize.me/profile/stefankinetosport/?planGUID=20d697e5ce0d461eb8d1fd02cedcdbf6"
-      title="Trup de Gladiator"
+      title="Corp Atletic prin Dezvoltare Musculară"
       image={GladiatorImage}
       price="250.00 RON"
     />
   </div>
+  <P style="mt-5 lg:mt-8 text-center text-slate-800">
+    * Pentru programul personalizat de coaching online, completează <a
+      class="hover:underline font-semibold"
+      href="https://forms.gle/pPPq2Qf8d1fbLbAT9">formularul de aici</a
+    > sau contactează-mă direct pe platforma preferată
+  </P>
 </Section>
